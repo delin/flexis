@@ -1,0 +1,30 @@
+extends layout/base
+include ../blocks/b-info/b-info
+
+block body.content
+    .b-page__body
+        h1.b-page__logo: img(alt='Flexis', src='/tmp/b-page__logo.png') 
+        div.b-page__about Группа компаний &laquo;Флексис&raquo;&nbsp;&mdash; высокотехнологический кластер из&nbsp;нескольких 
+            | компаний в&nbsp;России и&nbsp;США. &laquo;Флексис&raquo; занимает ведущие позиции в&nbsp;ряде сегментов, в&nbsp;том 
+            | числе как российский ИТ-вендор, с&nbsp;2006 года специализирующийся на&nbsp;интеллектуальных решениях для руководителей 
+            | высшего звена.
+        ul.b-page__child-list
+            li.b-page__child
+                h2 iDecide
+                p Новый алгоритм управления
+            li.b-page__child
+                h2 igrAlliance
+                p Лаборатория игр
+            li.b-page__child
+                h2 InspiRational
+                p Solve your marketing needs with the&nbsp;latest technology
+
+        p.b-page__counters-h До запуска сайта осталось
+
+        .b-page__counters
+            include ../blocks/b-counters/b-counters
+
+block body.footer
+    .b-page__footer
+        +b-info
+     

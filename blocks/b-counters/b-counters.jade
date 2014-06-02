@@ -1,0 +1,7 @@
+a = [{"name":'Дней', "max": 99, "val": 90 }, {"name":'Часов', "max": 24, "val": 7}, {"name":'Минут', "max": 60, "val": 45}];
+
+ul.b-counters(data-endtime = 'Jul 15 12:0:0 2014')
+    - for (var i = 0; i < a.length; i++)
+        li.b-counters__item
+            input.dial(type='text', value=a[i].val, data-max=a[i].max)
+            p.b-counters__text #{a[i].name}

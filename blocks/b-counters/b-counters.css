@@ -1,0 +1,38 @@
+.b-counters {
+  overflow: hidden;
+  width: 683px;
+  margin: auto;
+}
+.b-counters__item {
+  width: 174px;
+  height: 174px;
+  float: left;
+  margin-left: 80px;
+  position: relative;
+}
+.b-counters__item:first-child {
+  margin-left: 0;
+}
+.b-counters__item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: url("b-counters__item_after.png") no-repeat;
+}
+.b-counters__item input {
+  position: relative;
+  top: -37px;
+}
+.b-counters__text {
+  position: absolute;
+  text-align: center;
+  top: 91px;
+  left: 0;
+  right: 0;
+  font-size: 26px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
