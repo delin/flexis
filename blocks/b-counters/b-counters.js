@@ -54,10 +54,15 @@ $(function() {
         var b = a.getTime()/(1000*60*60*24);
         b = b - (b%1);
 
-        var $ = jQuery('.dial');
+        var $ = $('.dial');
+        var $t = $.parents('.b-counters__item').find('.b-counters__text'); 
+        
         $.eq(0).val(b).trigger("change");
         $.eq(1).val(a.getHours() - GMT).trigger("change");
         $.eq(2).val(a.getMinutes()).trigger("change");
+        
+        $t(0).text()
+        
         setInterval(animateTime, 60000);
     }
     animateTime();
