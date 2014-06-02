@@ -69,30 +69,5 @@
     <script src="http://yandex.st/jquery/1.9.1/jquery.min.js"> </script>
     <script>window.jQuery || document.write("<script src=\"lib/jquery/jquery.min.js\"><\/script>")</script>
     <script src="publish/script.js"></script>
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount','UA-XXXXX-X'],['_trackPageview']);
-      (function(doc, w, script, c) {
-          var f = function () { fjs.parentNode.insertBefore(js, fjs); };
-          var js, fjs = doc.getElementsByTagName(script)[0],
-              add = function(url, id) {
-                  if (doc.getElementById(id)) {return;}
-                  js = doc.createElement(script); js.src = url; js.async = true;
-                  id && (js.id = id);
-                  f();
-              };
-              
-          (w[c] = w[c] || []).push(function() {
-              try { w.yaCounterXXXXXXX = new Ya.Metrika({id:XXXXXXX, enableAll: true, webvisor:true}); } catch(e) {}
-          });
-          
-          add('//www.google-analytics.com/ga.js', 'ga');
-          add(("https:" == location.protocol ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js", 'ya-metrika');
-          //add('https://apis.google.com/js/plusone.js'); // Google+ button
-          //add('//connect.facebook.net/en_US/all.js', 'facebook-jssdk'); // Facebook SDK
-          //add('//platform.twitter.com/widgets.js', 'twitter-wjs'); // Twitter SDK
-      }(document, window, 'script', 'yandex_metrika_callbacks'));
-    </script>
-    <noscript><div><img src="//mc.yandex.ru/watch/XXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   </body>
 </html>
