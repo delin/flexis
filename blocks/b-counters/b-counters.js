@@ -54,14 +54,22 @@ $(function() {
         var b = a.getTime()/(1000*60*60*24);
         b = b - (b%1);
 
-        var $ = $('.dial');
+        var $ = jQuery('.dial');
         var $t = $.parents('.b-counters__item').find('.b-counters__text'); 
         
         $.eq(0).val(b).trigger("change");
         $.eq(1).val(a.getHours() - GMT).trigger("change");
         $.eq(2).val(a.getMinutes()).trigger("change");
         
-        $t(0).text()
+        var temp;
+        temp = b%10; 
+        $t.eq(0).text(temp == 1?'День':temp >= 2&&temp <= 4?'Дня':'Дней');
+        
+        temp = (a.getHours() - GMT)%10;
+        $t.eq(1).text(temp == 1?'Час':temp >= 2&&temp <= 4?'Часа':'Часов');
+        
+        temp = a.getMinutes()%10;
+        $t.eq(2).text(temp == 1?'Минута':temp >= 2&&temp <= 4?'Минуты':'Минут');
         
         setInterval(animateTime, 60000);
     }
